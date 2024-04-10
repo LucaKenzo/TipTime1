@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.TipTime"
+             Title="TipTime">
+    <VerticalStackLayout>
+
+        <Label 
+            Text="Bill"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry 
+            x:Name="ValueEntry"
+            Placeholder="Digite aqui o valor da refeição: "/>
+
+        <Label
+            Text="Gorjeta"/>
+
+        <Label
+            x:Name="TipLabel"
+            Text="R$ 0.00"/>
+
+        <Label
+            Text="Total: "/>
+
+        <Label
+            x:Name="TotalLabel"
+            Text="R$ 0.00"/>
+
+        <Label
+            Text="Porcentagem da gorjeta"/>
+
+        <Label 
+            x:Name="PercentageLabel"
+            Text="0%"/>
+
+        <Slider
+            x:Name="TipPercentageSlider"
+            Minimum="0"
+            Maximum="100"
+            Value="15"
+            ValueChanged="TipPercentageSlider_ValueChanged"/>
+
+        <Button 
+            x:Name="Button15Percentage"
+            Text="15%"
+            Clicked="Button15Percentage_Clicked"
+            HorizontalOptions="Fill"/>
+
+        <Button 
+            x:Name="Button20Percentage"
+            Text="20%"
+            Clicked="Button20Percentage_Clicked"
+            HorizontalOptions="Fill"/>
+
+        <Button 
+            x:Name="RoundDownButton"
+             Clicked="RoundDownButton_Clicked"
+            Text="Round Down"
+            HorizontalOptions="Fill"/>
+
+        <Button 
+            x:Name="RoundUpButton"
+            Clicked="RoundUpButton_Clicked"
+            Text="Round Up"
+            HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>
